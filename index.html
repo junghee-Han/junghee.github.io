@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Experiments</title>
+</head>
+<body>
+    <h1>JavaScript Experiments</h1>
+    <!-- <script src="./experiments.js">
+    </script> -->
+    <script src="./excercise.js">
+    </script>
+
+    <!-- <ul>
+        <li class='js-target'>Unchnaged</li>
+        <li class='js-target'>Unchnaged</li>
+        <li>Won't change</li>
+        <li class='js-target'>Unchnaged</li>
+        <li>Won't Change</li>
+        <li class='js-target'>Unchnaged</li>
+    </ul> -->
+
+    <div class='button-container'>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+    </div>
+    <input placeholder='type into me!' class='input-to-copy'/>
+    <p class='p-to-copy-to'>Nothing has happened yet.</p>
+
+
+<style>
+    #red-square {
+        width: 100px;
+        height: 100px;
+        background-color: crimson;
+    }
+
+
+</style>
+
+<div id='red-square'></div>
+<button class='event-button'>click me!</button>
+
+<script>
+
+    document.querySelector('.button-container').addEventListener('click', function(event){
+        if(event.target.tagName === 'BUTTON'){
+        alert(`You clicked on button ${event.target.innerText}`);
+        }
+    });
+    // const redSquare = document.getElementById('red-square');
+    // redSquare.style.backgroundColor= 'green';
+    // redSquare.style.border ='5px solid orange';
+
+    // let h2s = document.querySelectorAll('h2');
+
+    // console.log(h2s);
+    
+    // let newMessage = document.querySelectorAll('.js-target');
+    // for(let i=0; i < newMessage.length; i++){
+    //     const currentElement = newMessage[i];
+    //     currentElement.innerHTML = '<h1>New Massage</h1>';
+    // }
+
+    // const button = document.querySelector('.event-button');
+    // button.addEventListener('click', function(){
+    //     alert('Hey there!');
+    // });
+
+    // x = Array.from(h2s);
+    // for(let i =0; i<h2s.length; i++){ h2s[i].style.color = 'papyawhip';}
+    const paragraph = document.querySelector('.input-to-copy').addEventListener("keyup",function(event){
+        console.log('event');
+        paragraph.innerText = event.target.value;
+    });
+
+
+
+
+</script>
+
+</body>
+</html>
